@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div>
+        <h1>User Management System</h1>
+        <p>Manage your users in one place</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- User Form -->
+    <section class="form-card">
+        <h2 id="formTitle">Add New User</h2>
+
+        <form id="userForm">
+
+            <input type="hidden" id="userId">
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter full name"
+                        minlength="2"
+                        maxlength="100"
+                        required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter email address"
+                        maxlength="150"
+                        required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter 10-digit phone number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" id="submitBtn">
+                    Add User
+                </button>
+
+                <button type="button" id="cancelBtn"
+                        class="cancel-btn" hidden>
+                    Cancel
+                </button>
+            </div>
+
+        </form>
+    </section>
+
+    <!-- Users Table -->
+    <section class="table-card">
+
+
+        <div class="table-header">
+            <h2>All Users</h2>
+
+            <button
+                    type="button"
+                    id="refreshBtn"
+                    class="refresh-btn">
+                Refresh
+            </button>
+        </div>
+
+
+
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="userTableBody">
+                    <tr>
+                        <td colspan="5">Loading users...</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

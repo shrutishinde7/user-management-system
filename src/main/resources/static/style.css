@@ -1,0 +1,157 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #263247;
+}
+
+.header {
+    background: #243b55;
+    color: white;
+    padding: 25px 8%;
+}
+
+.header h1 {
+    font-size: 27px;
+    margin-bottom: 7px;
+}
+
+.header p {
+    color: #d5dfeb;
+    font-size: 14px;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.form-card,
+.table-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+h2 {
+    margin-bottom: 22px;
+    font-size: 20px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5dce5;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3867d6;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #3867d6;
+    color: white;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.88;
+}
+
+.cancel-btn {
+    background: #64748b;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.refresh-btn {
+    background: #64748b;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e8edf3;
+    font-size: 14px;
+}
+
+th {
+    background: #f1f4f9;
+    color: #34445c;
+}
+
+.edit-btn {
+    background: #e5a323;
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background: #dc3545;
+}
+
+.empty-message {
+    text-align: center;
+    color: #64748b;
+    padding: 25px;
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 94%;
+    }
+
+    .header {
+        padding: 22px 5%;
+    }
+
+    .form-card,
+    .table-card {
+        padding: 17px;
+    }
+}
